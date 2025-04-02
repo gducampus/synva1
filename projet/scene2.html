@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-cursor-teleport@1.6.0/dist/aframe-cursor-teleport-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+  <a-scene cursor="rayOrigin: mouse">
+    <!-- camera rig -->
+    <a-assets>
+      <img id="sky" src="resources/clear-sunny-sky.jpg">
+      <img src="resources/ground.jpg" id="ground">
+      <a-asset-item id="lion" src="resources/baby_lion/scene.gltf"></a-asset-item>
+      <a-asset-item id="panther" src="resources/black_panther/scene.gltf"></a-asset-item>
+      <a-asset-item id="girafe" src="resources/girafe/scene.gltf"></a-asset-item>
+      <a-asset-item id="elephant" src="resources/elephant/scene.gltf"></a-asset-item>
+      <a-asset-item id="tree3" src="resources/jabami_anime_tree_v1/scene.gltf"></a-asset-item>
+      <a-asset-item id="tree_animate" src="resources/tree_animate/scene.gltf"></a-asset-item>
+      <a-asset-item id="old_tree" src="resources/old_tree/scene.gltf"></a-asset-item>
+
+   </a-assets>
+    <a-entity id="cameraRig" cursor-teleport="cameraRig: #cameraRig; cameraHead: #head; collisionEntities: .collision">
+      <a-entity id="head" position="0 1.6 0" camera look-controls="reverseMouseDrag: true"></a-entity>
+    </a-entity>
+  
+       <!-- sol -->
+        <a-plane material="color:#7BC8A4; src:#ground; repeat: 2000 2000" position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4"></a-plane>
+        
+          <!-- cIEL -->
+        <a-sky src="#sky"></a-sky>
+    <a-entity
+      class="collision"
+      position="0 -0.05 0"
+      geometry="primitive: box; width: 8; height: 0.1; depth: 8"
+    ></a-entity>
+  </a-scene>
+</body>
+</html>
