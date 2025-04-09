@@ -75,6 +75,7 @@
             <a-asset-item id="tree3" src="resources/jabami_anime_tree_v1/scene.gltf"></a-asset-item>
             <a-asset-item id="tree_animate" src="resources/tree_animate/scene.gltf"></a-asset-item>
             <a-asset-item id="old_tree" src="resources/old_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="palm" src="resources/palm/scene.gltf"></a-asset-item>
 
         </a-assets>
         <!-- Téléportation-->
@@ -117,13 +118,14 @@
 
 
 
-        <a-plane material="color:#7BC8A4; src:#ground; repeat: 2000 2000" position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4"></a-plane>
+        <a-plane class="collision" material="color:#7BC8A4; src:#ground; repeat: 2000 2000" position="0 0 0" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4"></a-plane>
         <a-sky src="#sky"></a-sky>
 
         <a-gltf-model src="#old_tree" position="0 0 12"></a-gltf-model>
         <a-gltf-model src="#old_tree" position="0 0 -12"></a-gltf-model>
         <a-gltf-model src="#old_tree" position="12 0 0"></a-gltf-model>
         <a-gltf-model src="#old_tree" position="-12 0 0" ></a-gltf-model>
+        <a-gltf-model src="#palm" position="-37 0 0.7" ></a-gltf-model>
         <a-gltf-model 
          src="#lion" 
          position="-12 0 -8.380" 
